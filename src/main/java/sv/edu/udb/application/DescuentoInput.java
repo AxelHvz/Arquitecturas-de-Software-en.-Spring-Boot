@@ -1,6 +1,6 @@
 package sv.edu.udb.application;
 
 
-public interface DescuentoPort {
+public interface DescuentoInput {
     double ejecutar(String nombre, double precio);
 }

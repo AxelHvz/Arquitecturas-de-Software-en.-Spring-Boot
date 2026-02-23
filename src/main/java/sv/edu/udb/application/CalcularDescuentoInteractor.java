@@ -5,7 +5,7 @@ import sv.edu.udb.domain.Producto;
 // Implementacion del caso de uso
 // Coordina la ejecucion de la logica de negocio
 // Implementa el puerto de entrada para cumplir con lo definido
-public class CalcularDescuentoUseCase implements DescuentoPort {
+public class CalcularDescuentoInteractor implements DescuentoInput {
 
     // Sobrescribe el metodo definido en la interfaz
     @Override

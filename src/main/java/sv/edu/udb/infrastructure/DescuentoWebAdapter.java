@@ -1,8 +1,8 @@
 package sv.edu.udb.infrastructure;
 
 import org.springframework.web.bind.annotation.*;
-import sv.edu.udb.application.DescuentoPort;
-import sv.edu.udb.application.CalcularDescuentoUseCase;
+import sv.edu.udb.application.DescuentoInput;
+import sv.edu.udb.application.CalcularDescuentoInteractor;
 
 
 // Convierte esta clase en un adaptador web
@@ -10,9 +10,9 @@ import sv.edu.udb.application.CalcularDescuentoUseCase;
 // Define la ruta del controlador en la web
 @RequestMapping("/tienda")
 
-public class DescuentoController {
+public class DescuentoWebAdapter {
     // Las dependencias siempre deben apuntar hacia adentro (hacia el Puerto)
-    private final DescuentoPort service = new CalcularDescuentoUseCase();
+    private final DescuentoInput service = new CalcularDescuentoInteractor();
 
     // Se define el endpoint HTTP GET para recibir peticiones
     @GetMapping("/descuento")
